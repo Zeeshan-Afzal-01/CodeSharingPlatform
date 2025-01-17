@@ -1,0 +1,87 @@
+code-sharing-platform/
+├── backend/
+│   ├── config/
+│   │   ├── db.js
+│   │   └── default.json
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── userController.js
+│   │   ├── repoController.js
+│   │   ├── chatController.js
+│   │   └── teamController.js
+│   ├── middleware/
+│   │   ├── authMiddleware.js
+│   │   └── errorHandler.js
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Repository.js
+│   │   ├── Team.js
+│   │   └── Message.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── userRoutes.js
+│   │   ├── repoRoutes.js
+│   │   ├── chatRoutes.js
+│   │   └── teamRoutes.js
+│   ├── utils/
+│   │   ├── logger.js
+│   │   └── emailService.js
+│   ├── app.js
+│   ├── server.js
+│   └── package.json
+├── frontend/
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── images/
+│   │   │   └── styles/
+│   │   │       └── main.css
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   │   ├── Header.jsx
+│   │   │   │   ├── Footer.jsx
+│   │   │   │   └── Sidebar.jsx
+│   │   │   ├── auth/
+│   │   │   │   ├── Login.jsx
+│   │   │   │   ├── Signup.jsx
+│   │   │   │   └── ResetPassword.jsx
+│   │   │   ├── dashboard/
+│   │   │   │   ├── DashboardHome.jsx
+│   │   │   │   └── ActivityFeed.jsx
+│   │   │   ├── repository/
+│   │   │   │   ├── RepositoryList.jsx
+│   │   │   │   ├── RepositoryDetail.jsx
+│   │   │   │   └── CodeEditor.jsx
+│   │   │   ├── chat/
+│   │   │   │   ├── ChatSidebar.jsx
+│   │   │   │   └── ChatWindow.jsx
+│   │   │   ├── team/
+│   │   │   │   ├── TeamList.jsx
+│   │   │   │   └── TeamDetails.jsx
+│   │   │   └── settings/
+│   │   │       ├── Profile.jsx
+│   │   │       └── AccountSettings.jsx
+│   │   ├── pages/
+│   │   │   ├── Home.jsx
+│   │   │   ├── About.jsx
+│   │   │   ├── Contact.jsx
+│   │   │   └── NotFound.jsx
+│   │   ├── context/
+│   │   │   ├── AuthContext.jsx
+│   │   │   ├── RepoContext.jsx
+│   │   │   └── ChatContext.jsx
+│   │   ├── hooks/
+│   │   │   ├── useAuth.js
+│   │   │   └── useFetch.js
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   └── authService.js
+│   │   ├── App.jsx
+│   │   ├── index.js
+│   │   └── routes.js
+│   └── package.json
+├── .gitignore
+├── README.md
+└── package.json
