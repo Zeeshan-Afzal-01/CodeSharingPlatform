@@ -14,6 +14,7 @@ app.get('/',(req,res)=>{
 app.use(passport.initialize())
 app.use('/',userRouter)
 
+
 app.listen(process.env.PORT,(req,res)=>{
     console.log(`The Server is Started at http://localhost:${process.env.PORT}`)
 })
