@@ -6,6 +6,9 @@ const bcrypt = require("bcrypt");
 const verifyToken=require('../middleware/verifyToken')
 
 
+
+
+
 router.get("/user",verifyToken, (req, res) => {
   res.send("Hello User");
 });
@@ -30,7 +33,7 @@ router.post("/register", async (req, res) => {
 
 
 
-router.get('/login', (req,res,next)=>{
+router.post('/login', (req,res,next)=>{
     passport.authenticate('local', { session: false }, (err, user, info) => {
         if (err) {
             return next(err);

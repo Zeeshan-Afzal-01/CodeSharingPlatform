@@ -452,18 +452,18 @@ team.collaborate();`}
         </div>
       </div>
     </section>
-    <section id="contact" className="bg-dark text-white py-5">
+    <section id="contact" className=" text-white py-5" style={{backgroundColor:"#171717"}}>
       <div className="container">
         {/* Title */}
         <div className="text-center mb-5">
           <h2 className="fw-bold display-5">Get in Touch</h2>
-          <p className="text-muted fs-5">We are here to help and answer any question you might have.</p>
+          <p className="text-white fs-5">We are here to help and answer any question you might have.</p>
         </div>
 
         {/* Form Section */}
         <div className="row">
           <div className="col-lg-6 mx-auto">
-            <form onSubmit={handleSubmit} className="p-4 bg-secondary rounded-3 shadow-lg">
+            <form onSubmit={handleSubmit} className="p-4 rounded-3 shadow-lg" style={{backgroundColor:"#171717"}}>
               <div className="mb-4">
                 <label htmlFor="name" className="form-label text-light">Name</label>
                 <input
@@ -533,21 +533,21 @@ team.collaborate();`}
         {/* Contact Information */}
         <div className="mt-5 row text-center g-4">
           <div className="col-md-4">
-            <div className="bg-secondary p-4 rounded-3 shadow-sm">
+            <div className=" p-4 rounded-3 shadow-sm contactFieldColor">
               <i className="bi bi-envelope-fill text-primary fs-2 mb-3"></i>
               <h5 className="fw-bold">Email Us</h5>
               <p className="text-light">zna152191@gmail.com</p>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="bg-secondary p-4 rounded-3 shadow-sm">
+            <div className=" p-4 rounded-3 shadow-sm contactFieldColor">
               <i className="bi bi-telephone-fill text-primary fs-2 mb-3"></i>
               <h5 className="fw-bold">Call Us</h5>
               <p className="text-light">+92 (34) 36185737</p>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="bg-secondary p-4 rounded-3 shadow-sm">
+            <div className="contactFieldColor p-4 rounded-3 shadow-sm">
               <i className="bi bi-geo-alt-fill text-primary fs-2 mb-3"></i>
               <h5 className="fw-bold">Visit Us</h5>
               <p className="text-light">Lahore</p>
