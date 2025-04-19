@@ -1,0 +1,7 @@
+# Ignore node_modules in both Backend and Frontend
+Backend/node_modules/
+Frontend/node_modules/
+
+# Ignore uploads folder in Backend
+Backend/uploads/
+

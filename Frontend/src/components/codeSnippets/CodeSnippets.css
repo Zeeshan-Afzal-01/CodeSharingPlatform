@@ -1,0 +1,72 @@
+.code-snippets-container {
+  padding: 20px;
+}
+
+.code-snippets-container .card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.code-snippets-container .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.code-snippets-container .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.code-snippets-container .code-preview {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.code-snippets-container .code-preview pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.code-snippets-container .code-preview code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: #333;
+}
+
+.code-snippets-container .badge {
+  font-size: 0.8rem;
+  padding: 0.5em 0.75em;
+  text-transform: capitalize;
+}
+
+.code-snippets-container .card-footer {
+  padding: 1rem;
+}
+
+.code-snippets-container .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+}
+
+.code-snippets-container .btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.code-snippets-container .text-muted {
+  color: #6c757d !important;
+}
+
+.code-snippets-container .display-4 {
+  color: #6c757d;
+  font-size: 3.5rem;
+} 

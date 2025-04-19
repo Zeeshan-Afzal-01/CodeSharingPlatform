@@ -1,0 +1,300 @@
+.search-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-header h1 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.search-header p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.search-form {
+  margin-bottom: 2rem;
+}
+
+.search-input-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.search-input-container:focus-within {
+  border-color: #4299e1;
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.15);
+}
+
+.search-icon {
+  color: #718096;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  outline: none;
+  color: #2d3748;
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+.search-button {
+  background: #4299e1;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background: #3182ce;
+}
+
+.search-button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+}
+
+.search-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #718096;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tab-button:hover {
+  background: #f7fafc;
+  color: #4299e1;
+}
+
+.tab-button.active {
+  background: #ebf8ff;
+  color: #4299e1;
+}
+
+.tab-button svg {
+  font-size: 1.1rem;
+}
+
+.search-results {
+  margin-top: 2rem;
+}
+
+.result-section {
+  margin-bottom: 3rem;
+}
+
+.result-section h2 {
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.result-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden; /* Ensures the image stays within the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd; /* Optional: Add a background color for empty avatars */
+}
+
+.user-avatar img {
+  width: 100%; /* Ensure image fills the container */
+  height: 100%;
+  object-fit: cover; /* Crop and center the image */
+  border-radius: 50%; /* Ensure the image is circular */
+}
+
+.card-content {
+  margin-bottom: 1rem;
+}
+
+.card-content h3 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card-content p {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.loading-spinner {
+  text-align: center;
+  color: #718096;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-container {
+    padding: 1rem;
+  }
+
+  .search-header h1 {
+    font-size: 2rem;
+  }
+
+  .search-input-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .result-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation for loading state */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #e2e8f0;
+  border-top-color: #4299e1;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+/* Add Friend Button */
+.add-friend-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #4CAF50; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  font-size: 1rem;
+}
+
+.add-friend-btn:hover {
+  background: #45a049;
+}
+
+.team-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.open-team-btn {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.open-team-btn:hover {
+  background-color: #3182ce;
+}
+
+.request-team-btn {
+  background-color: #48bb78;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.request-team-btn:hover {
+  background-color: #38a169;
+}

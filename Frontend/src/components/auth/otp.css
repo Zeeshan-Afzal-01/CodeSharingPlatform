@@ -1,0 +1,119 @@
+/* OTP Container */
+.otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 20px;
+  }
+  
+  /* Card */
+  .otp-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 50vw;
+    max-width: 400px;  /* Prevents stretching on larger screens */
+  }
+  
+  /* Heading */
+  h2 {
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* OTP Input */
+  .otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .otp-input {
+    width: 45px !important;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #6e8efb;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+  }
+  
+  .otp-input:focus {
+    border-color: #a777e3;
+    box-shadow: 0px 0px 10px rgba(167, 119, 227, 0.5);
+  }
+  
+  /* Error Message */
+  .otp-message {
+    height: 20px;  /* Fixed height to prevent shifting */
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+    visibility: hidden;  /* Keeps the layout stable */
+  }
+  
+  .otp-message.show {
+    visibility: visible;  /* Show message only when needed */
+  }
+  
+  /* Button */
+  .verify-btn {
+    width: 100%;
+    max-width: 250px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .verify-btn:hover {
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+  }
+  
+  /* OTP GIF Animation */
+  .otp-animation {
+    width: 200px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+    border-radius: 8%;
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 600px) {
+    .otp-card {
+      width: 90vw;
+      padding: 20px;
+    }
+  
+    .otp-input {
+      width: 40px !important;
+      height: 45px;
+      font-size: 20px;
+    }
+  
+    .verify-btn {
+      width: 90%;
+    }
+  
+    .otp-animation {
+      width: 150px;
+    }
+  }
+  

@@ -1,0 +1,106 @@
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 280px;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  z-index: 1025;
+}
+
+/* Sidebar visible with animation */
+.sidebar.show {
+  transform: translateX(0);
+}
+
+/* Show sidebar by default on larger screens */
+@media (min-width: 1400px) {
+  .sidebar {
+    transform: translateX(0); /* Sidebar is always visible */
+    width: 250px; /* Full width for large screens */
+  }
+  .d-lgnone{
+    display: none;
+  }
+}
+
+/* For medium screens (between 1200px and 1400px), adjust sidebar width */
+@media (max-width: 1400px) and (min-width: 1200px) {
+  .sidebar {
+    transform: translateX(0); /* Sidebar stays visible */
+    width: 200px; /* Slightly smaller sidebar */
+  }
+}
+
+/* For smaller screens (below 1200px), hide the sidebar and show the toggle button */
+@media (max-width: 1199px) {
+  .sidebar {
+    transform: translateX(-100%); /* Hide the sidebar */
+    width: 250px; /* Ensure the width remains fixed when the sidebar is shown */
+  }
+
+  /* Show the floating toggle button on small screens */
+  .sidebar-toggle {
+    position: fixed !important;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1026;
+    width: 48px;
+    height: 48px;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  /* Hover effect for the button */
+  .sidebar-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4) !important;
+    background: linear-gradient(135deg, #0056b3, #004494) !important;
+  }
+
+  .sidebar-toggle:active {
+    transform: scale(0.95);
+  }
+
+  .sidebar-toggle svg {
+    color: white;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.show + .sidebar-overlay + .sidebar-toggle svg {
+    transform: rotate(180deg);
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1024;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sidebar-toggle {
+    display: none !important;
+  }
+}
+
+/* Ensuring the icon is centered inside the floating button */
+.sidebar-toggle i {
+  font-size: 24px; /* Adjust icon size */
+  margin: 0;
+}

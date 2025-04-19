@@ -1,0 +1,13 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 40;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+.contactFieldColor{
+  background-color: #262626;
+}

@@ -1,0 +1,194 @@
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utility classes */
+.text-white {
+  color: #fff;
+}
+
+.bg-neutral-900 {
+  background-color: #171717;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* Layout structure */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  background: white;
+  height: 56px;
+}
+
+/* Main content layout */
+.main-content {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+/* Routes with navbar/footer */
+[class*="route-with-nav"] .main-content {
+  padding-top: 56px;
+  min-height: calc(100vh - 56px);
+}
+
+/* Landing page and auth pages */
+.landing-page,
+.auth-page {
+  margin-left: 0 !important;
+  padding: 20px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+[class*="route-with-nav"] .landing-page,
+[class*="route-with-nav"] .auth-page {
+  min-height: calc(100vh - 56px - 60px) !important;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+[class*="route-with-nav"] .sidebar {
+  padding-top: 56px;
+}
+
+/* Content area styles */
+.content-area {
+  flex: 1;
+  background-color: #f8f9fa;
+  transition: margin-left 0.3s;
+}
+
+[class*="route-with-nav"] .content-area {
+  min-height: calc(100vh - 56px);
+}
+
+/* Adjust content area when sidebar is shown */
+.sidebar-show .content-area {
+  margin-left: 250px;
+}
+
+/* Content area margin for medium screens */
+@media (max-width: 1400px) and (min-width: 1200px) {
+  .content-area,
+  .sidebar-show .content-area {
+    margin-left: 205px;
+  }
+}
+
+/* Pages without sidebar */
+.main-content:not(.sidebar-show) .content-area {
+  margin-left: 0;
+}
+
+/* Footer styles */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  padding: 1rem 0;
+  margin-top: auto;
+  height: 60px;
+  z-index: 1020;
+}
+
+/* Media query for screens below 1200px */
+@media (max-width: 1199px) {
+  .content-area {
+    margin-left: 0 !important;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .sidebar-show .content-area {
+    margin-left: 0;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 991.98px) {
+  [class*="route-with-nav"] .landing-page,
+  [class*="route-with-nav"] .auth-page {
+    padding: 15px !important;
+    margin-bottom: 60px !important;
+  }
+
+  [class*="route-with-nav"] .content-area {
+    padding-bottom: 60px;
+  }
+}
+
+/* Profile page specific overrides */
+.profile-container {
+  max-width: 100%;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add more styles here based on your specific requirements */

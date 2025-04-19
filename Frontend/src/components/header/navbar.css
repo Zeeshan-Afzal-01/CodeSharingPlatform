@@ -1,0 +1,57 @@
+.navbar {
+    background-color: #1a202c;
+    color: white;
+    position: sticky;
+    width: 100%;
+    z-index: 10;
+    
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links.open {
+    display: block;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.btn {
+    background-color: #2b6cb0;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.login-btn {
+    background-color: #4a5568;
+}
+
+.signup-btn {
+    background-color: #3182ce;
+}
+
+/* Mobile styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+}
