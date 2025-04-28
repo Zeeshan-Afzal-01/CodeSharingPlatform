@@ -7,8 +7,8 @@ const transport = nodemailer.createTransport({
     port: "465",
    service: "gmail",
     auth: {
-      user: "zaservices6@gmail.com",
-      pass: "cpcd vvsb tqhn dmpb",
+      user: "Enter you email",
+      pass: "Enter your pass",
 }})
 
 const mailOptions={
